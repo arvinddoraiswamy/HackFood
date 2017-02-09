@@ -1,0 +1,15 @@
+<%= form_for @ingredient do |f| %>
+    <p>
+    <%= f.label :label_name, "Name" %>
+    <%= f.text_field :name %>
+    </p>
+
+    <p>
+    <%= f.label :label_reason, "Reason" %>
+    <%= f.text_field :reason%>
+    </p>
+    <%= f.submit %>
+<% end %>
+
+<br/>
+<%= link_to 'Back', ingredients_path %>

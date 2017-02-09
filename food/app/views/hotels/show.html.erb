@@ -1,0 +1,18 @@
+<p>
+    <strong>Hotel Name:</strong>
+    <%= @hotel.name %>
+</p>
+
+<p>
+    <strong>City:</strong>
+    <%= @hotel.city %>
+</p>
+
+<p>
+    <strong>State:</strong>
+    <%= @hotel.state %>
+</p>
+
+<%= link_to 'Back', hotels_path %>
+<%= link_to 'Edit', edit_hotel_path(@hotel) %>
+<%= link_to 'Delete', hotel_path(@hotel), method: :delete, data: {confirm: 'Are you sure?' } %>

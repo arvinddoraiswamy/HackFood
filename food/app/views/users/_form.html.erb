@@ -1,0 +1,15 @@
+<%= form_for @user do |f| %>
+    <p>
+    <%= f.label :label_handle, "User" %>
+    <%= f.text_field :handle %>
+    </p>
+
+    <p>
+    <%= f.label :label_dietrepeatcount, "Repeat diet after so many weeks" %>
+    <%= f.text_field :dietrepeatcount %>
+    </p>
+    <%= f.submit %>
+<% end %>
+
+<br/>
+<%= link_to 'Back', users_path %>

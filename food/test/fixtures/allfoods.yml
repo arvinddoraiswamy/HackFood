@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  item: MyString
+  foodgroup: MyString
+  vitamin: MyString
+  mineral: MyString
+  otherelements: MyString
+
+two:
+  item: MyString
+  foodgroup: MyString
+  vitamin: MyString
+  mineral: MyString
+  otherelements: MyString

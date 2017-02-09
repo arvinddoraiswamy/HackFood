@@ -1,0 +1,41 @@
+<%= form_for @schedule do |f| %>
+    <p>
+    <%= label_tag 'Date (MM-DD-YYYY)' %>
+    <%= text_field(:schedule, :date) %>
+    </p>
+    <p>
+    <%= label_tag 'Fruits' %>
+    <%= collection_select(:schedule, :fruit1, Allfood.where(:foodgroup => 'fruit'), :item, :item) %>
+    <%= collection_select(:schedule, :fruit2, Allfood.where(:foodgroup => 'fruit'), :item, :item) %>
+    <%= collection_select(:schedule, :fruit3, Allfood.where(:foodgroup => 'fruit'), :item, :item) %>
+    <%= collection_select(:schedule, :fruit4, Allfood.where(:foodgroup => 'fruit'), :item, :item) %>
+    <%= collection_select(:schedule, :fruit5, Allfood.where(:foodgroup => 'fruit'), :item, :item) %>
+    </p>
+    <p>
+    <%= label_tag 'Vegetables' %>
+    <%= collection_select(:schedule, :veggie1, Allfood.where(:foodgroup => 'vegetable'), :item, :item) %>
+    <%= collection_select(:schedule, :veggie2, Allfood.where(:foodgroup => 'vegetable'), :item, :item) %>
+    <%= collection_select(:schedule, :veggie3, Allfood.where(:foodgroup => 'vegetable'), :item, :item) %>
+    <%= collection_select(:schedule, :veggie4, Allfood.where(:foodgroup => 'vegetable'), :item, :item) %>
+    </p>
+    <p>
+    <%= label_tag 'Proteins' %>
+    <%= collection_select(:schedule, :protein1, Allfood.where(:foodgroup => 'protein'), :item, :item) %>
+    <%= collection_select(:schedule, :protein2, Allfood.where(:foodgroup => 'protein'), :item, :item) %>
+    <%= collection_select(:schedule, :protein3, Allfood.where(:foodgroup => 'protein'), :item, :item) %>
+    </p>
+    <p>
+    <%= label_tag 'Carbohydrates' %>
+    <%= collection_select(:schedule, :carbs1, Allfood.where(:foodgroup => 'carbohydrate'), :item, :item) %>
+    <%= collection_select(:schedule, :carbs2, Allfood.where(:foodgroup => 'carbohydrate'), :item, :item) %>
+    </p>
+    <p>
+    <%= label_tag 'Junk' %>
+    <%= collection_select(:schedule, :junk, Allfood.where(:foodgroup => 'junk'), :item, :item) %>
+    </p>
+    <%= f.submit %>
+<% end %>
+
+<br/>
+<%= link_to 'Back', schedules_path %>
+<br/>

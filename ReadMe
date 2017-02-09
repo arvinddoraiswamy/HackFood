@@ -1,0 +1,20 @@
+- Map all food to respective nutrients [CRUD]
+    - Flat list for Carbs, Proteins, Fats, Other foods
+    - hash for veggies and fruits [veggie/fruit - vitamin
+                                   veggie/fruit - mineral]
+
+- Analysis of what I should eat this week
+    - Analyze the history of the last month (configurable) to decide diet this week
+
+- Add new weekly schedule
+    - Add per-person lists per week [CRUD]
+    - Add directly from analysis
+
+- Ingredients to avoid
+    - List of ingredients to avoid with reasons on why
+
+- Vegetarian hotels per state
+    - Vegan/Lacto Vegetarian hotels per state
+
+- Links to great recipes
+    - Links to simple recipes per vegetable

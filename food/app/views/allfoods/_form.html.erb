@@ -1,0 +1,31 @@
+<%= form_for @allfood do |f| %>
+    <p>
+    <%= f.label :label_item, "Item" %>
+    <%= f.text_field :item %>
+    </p>
+
+    <p>
+    <%= f.label :label_foodgroup, "FoodGroup" %>
+    <%= f.text_field :foodgroup%>
+    </p>
+
+    <p>
+    <%= f.label :label_vitamin, "Vitamin" %>
+    <%= f.text_field :vitamin%>
+    </p>
+
+    <p>
+    <%= f.label :label_mineral, "Mineral" %>
+    <%= f.text_field :mineral%>
+    </p>
+
+    <p>
+    <%= f.label :label_otherelements, "OtherElement" %>
+    <%= f.text_field :otherelements%>
+    </p>
+
+    <%= f.submit %>
+<% end %>
+
+<br/>
+<%= link_to 'Back', allfoods_path %>

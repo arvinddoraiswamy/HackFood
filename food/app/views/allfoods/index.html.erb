@@ -1,0 +1,37 @@
+<h1> All Foods</h1>
+
+<table>
+<tr>
+    <th>Item</th>
+    <th> | </th>
+    <th>Foodgroup</th>
+    <th> | </th>
+    <th>Vitamin</th>
+    <th> | </th>
+    <th>Mineral</th>
+    <th> | </th>
+    <th>Other Elements</th>
+    <th> | </th>
+</tr>
+
+<% @allfoods.each do |food| %>
+    <tr>
+        <td align="center"><%= food.item %></td>
+        <td>|</td>
+        <td align="center"><%= food.foodgroup %></td>
+        <td>|</td>
+        <td align="center"><%= food.vitamin%></td>
+        <td>|</td>
+        <td align="center"><%= food.mineral %></td>
+        <td>|</td>
+        <td align="center"><%= food.otherelements %></td>
+        <td>|</td>
+        <td><%= link_to 'Edit', edit_allfood_path(food) %></td>
+        <td><%= link_to 'Show', allfood_path(food) %></td>
+        <td><%= link_to 'Delete', allfood_path(food), method: :delete, data: {confirm: 'Are you sure?' } %></td>
+    </tr>
+<% end %>
+
+</table>
+<BR/>
+<td><%= link_to 'New', new_allfood_path %></td>

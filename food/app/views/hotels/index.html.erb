@@ -1,0 +1,25 @@
+<table>
+<tr>
+    <th>Name</th>
+    <th> | </th>
+    <th>City</th>
+    <th> | </th>
+    <th>State</th>
+    <th> | </th>
+</tr>
+
+<% @hotels.each do |hotel| %>
+    <tr>
+        <td align="center"><%= hotel.name %></td>
+        <td>|</td>
+        <td align="center"><%= hotel.city %></td>
+        <td>|</td>
+        <td align="center"><%= hotel.state%></td>
+        <td>|</td>
+        <td><%= link_to 'Edit', edit_hotel_path(hotel) %></td>
+        <td><%= link_to 'Show', hotel_path(hotel) %></td>
+        <td><%= link_to 'Delete', hotel_path(hotel), method: :delete, data: {confirm: 'Are you sure?' } %></td>
+    </tr>
+<% end %>
+
+</table>

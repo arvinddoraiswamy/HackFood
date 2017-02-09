@@ -1,0 +1,29 @@
+<p>
+    <strong>Item:</strong>
+    <%= @allfood.item %>
+</p>
+
+<p>
+    <strong>FoodGroup:</strong>
+    <%= @allfood.foodgroup %>
+</p>
+
+<p>
+    <strong>Vitamin:</strong>
+    <%= @allfood.vitamin %>
+</p>
+
+<p>
+    <strong>Mineral:</strong>
+    <%= @allfood.mineral %>
+</p>
+
+<p>
+    <strong>Other Elements:</strong>
+    <%= @allfood.otherelements %>
+</p>
+
+
+<%= link_to 'Back', allfoods_path %>
+<%= link_to 'Edit', edit_allfood_path(@allfood) %>
+<%= link_to 'Delete', allfood_path(@allfood), method: :delete, data: {confirm: 'Are you sure?' } %>

@@ -1,0 +1,27 @@
+Tables:
+    User: Id, Handle, DietRepeatWeekCount
+    Food: Id, Item, FoodGroup, Vitamin, Mineral, OtherElements
+    Ingredients: Id, Name, Reason
+    Hotels: Id, Name, City, State
+    Schedule: Id, Handle, WeekId, Day, meal1, meal2, meal3, meal4, meal5, scheduleId
+
+Data to be added:
+    Food and their nutrition - Done
+    Hotels - Done
+    Ingredients - Done
+    Recipes (over time) - NA right now
+
+Flow to default CRUD links:
+    When adding schedule for week:
+        - Either automatic or manual
+            - If its manual
+                    - Drop Downs to add this weeks schedule
+                    - Warnings if some group is missing this week after manually adding your schedule
+                    - Show last 2 weeks schedule
+            - If its automatic
+                - Give user option to autogenerate this week's schedule
+                    - All food groups must be considered and a new schedule generated
+                    - Generate 3 such schedules
+                    - User chooses any of the 3 and the schedule is saved
+                    - If user not happy, click change button to change any one of the options and display a fresh set
+                    - More than 3 times clicking changes, recommend manual choosing of options. Allow user to keep clicking though

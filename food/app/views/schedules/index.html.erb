@@ -1,0 +1,39 @@
+<table>
+<tr>
+    <th>Date</th>
+    <th> | </th>
+    <th>Fruit</th>
+    <th> | </th>
+    <th>Vegetable</th>
+    <th> | </th>
+    <th>Protein</th>
+    <th> | </th>
+    <th>Carbohydrate</th>
+    <th> | </th>
+    <th>Junk</th>
+    <th> | </th>
+</tr>
+
+<% @schedules.each do |schedule| %>
+    <tr>
+        <td align="center"><%= schedule.date %></td>
+        <td>|</td>
+        <td align="center"><%= schedule.fruit1%>,<%= schedule.fruit2%>,<%= schedule.fruit3%>,<%= schedule.fruit4%>,<%= schedule.fruit5%></td>
+        <td>|</td>
+        <td align="center"><%= schedule.veggie1%>,<%= schedule.veggie2%>,<%= schedule.veggie3%>,<%= schedule.veggie4%></td>
+        <td>|</td>
+        <td align="center"><%= schedule.protein1%>,<%= schedule.protein2%>,<%= schedule.protein3%></td>
+        <td>|</td>
+        <td align="center"><%= schedule.carbs1%>,<%= schedule.carbs2%></td>
+        <td>|</td>
+        <td align="center"><%= schedule.junk%></td>
+        <td>|</td>
+
+        <td><%= link_to 'Edit', edit_schedule_path(schedule) %></td>
+        <td><%= link_to 'Show', schedule_path(schedule) %></td>
+        <td><%= link_to 'Delete', schedule_path(schedule), method: :delete, data: {confirm: 'Are you sure?' } %></td>
+    </tr>
+<% end %>
+</table>
+<BR/>
+<td><%= link_to 'New', new_schedule_path %></td>
