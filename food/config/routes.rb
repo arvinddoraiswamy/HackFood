@@ -4,5 +4,6 @@ Rails.application.routes.draw do
     resources :ingredients
     resources :hotels
     resources :schedules
+    get "autogen" => 'schedules#generate_weekly_schedule'
     root 'users#index'
 end
